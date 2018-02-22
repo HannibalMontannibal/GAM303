@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Basket : MonoBehaviour {
 
-	public Text scoreGT;
+	public TextMesh scoreGT;
 
 	// Use this for initialization
 	void Start () 
@@ -14,7 +14,7 @@ public class Basket : MonoBehaviour {
 		GameObject scoreGO = GameObject.Find("ScoreCounter");
 
 		// Get the GUIText Component of that GameObject
-		scoreGT = scoreGO.GetComponent<Text>(); 
+		scoreGT = scoreGO.GetComponent<TextMesh>(); 
 
 		// Set the starting number of points to 0
 		scoreGT.text = "0";

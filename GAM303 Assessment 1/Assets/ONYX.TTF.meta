@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1ddb7d786b7b44a46b4321a2f395433c
+timeCreated: 1519266989
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Onyx
+  fontNames:
+  - Onyx
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
