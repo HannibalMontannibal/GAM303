@@ -7,16 +7,12 @@ public class WaypointHolder : MonoBehaviour
 {
 	public Text scoreText;
 
-	public static float score;
-	public static float timer;
+	public  float score;
+	public  float timer;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public void UpdateScore()
+	{
+		score += 100;
+		scoreText.text = score.ToString ();
 	}
 }
