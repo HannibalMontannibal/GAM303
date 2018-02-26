@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 public class Waypoints : MonoBehaviour {
 
@@ -10,8 +10,8 @@ public class Waypoints : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-		if (col.name == "ColliderBottom")
-			WaypointHolder.score += 100f;
+//		if (col.name == "ColliderBottom")
+//			WaypointHolder.score += 100f;
 	}
 
 

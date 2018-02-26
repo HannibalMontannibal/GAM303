@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 public class WaypointHolder : MonoBehaviour 
 {
-	public Text scoreText;
+//	public Text scoreText;
 
 	public  float score;
 	public  float timer;
@@ -13,6 +13,6 @@ public class WaypointHolder : MonoBehaviour
 	public void UpdateScore()
 	{
 		score += 100;
-		scoreText.text = score.ToString ();
+//		scoreText.text = score.ToString ();
 	}
 }
