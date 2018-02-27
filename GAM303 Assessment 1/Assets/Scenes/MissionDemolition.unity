@@ -359,7 +359,7 @@ MonoBehaviour:
   easing: 0.05
   minXY: {x: 0, y: 0}
   _____________________________: 0
-  poi: {fileID: 0}
+  poi: {fileID: 1934046153640760, guid: 0f2e475dc73f05e47b3fb2b772910f7a, type: 2}
   camZ: 0
 --- !u!1 &347477783
 GameObject:
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   _____________________________: 0
   launchPoint: {fileID: 652890322}
   launchPos: {x: 0, y: 0, z: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 1934046153640760, guid: 0f2e475dc73f05e47b3fb2b772910f7a, type: 2}
   aimingMode: 0
 --- !u!1001 &1389215134
 Prefab:
