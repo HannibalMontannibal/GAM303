@@ -22,7 +22,7 @@ public class FollowCam : MonoBehaviour
 	}
 	void FixedUpdate () {
 		// if there's only one line following an if, it doesn't need braces
-		if (poi == null) return; // return if there is no poi
+		//if (poi == null) return; // return if there is no poi
 
 		// Get the position of the poi
 		//Vector3 destination = poi.transform.position;
