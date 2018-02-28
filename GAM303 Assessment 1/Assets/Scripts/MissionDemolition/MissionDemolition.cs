@@ -14,8 +14,8 @@ public class MissionDemolition : MonoBehaviour
 	static public MissionDemolition S; // a Singleton
 	// fields set in the Unity Inspector pane
 	public GameObject[] castles; // An array of the castles
-	public GUIText gtLevel; // The GT_Level GUIText
-	public GUIText gtScore; // The GT_Score GUIText
+	public Text gtLevel; // The GT_Level UIText
+	public Text gtScore; // The GT_Score UIText
 	public Vector3 castlePos; // The place to put castles
 	public bool _____________________________;
 	// fields set dynamically
