@@ -17,12 +17,13 @@ public class PauseMenu : MonoBehaviour {
 		if (isPaused) {
 			pauseMenu.SetActive (true);
 			Time.timeScale = 0f;
-			Cursor.visible = true;
-		} else 
+			//Cursor.visible = true;
+		} 
+		else 
 		{
 			pauseMenu.SetActive (false);
 			Time.timeScale = 1f;
-			Cursor.visible = false;
+			//Cursor.visible = false;
 
 		}
 

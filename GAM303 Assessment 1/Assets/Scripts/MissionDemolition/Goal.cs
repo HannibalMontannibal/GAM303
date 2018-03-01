@@ -8,6 +8,10 @@ public class Goal : MonoBehaviour
 	// A static field accessible by code anywhere
 	static public bool goalMet = false;
 
+	void Start()
+	{
+
+	}
 	void OnTriggerEnter( Collider other ) 
 	{
 
@@ -16,12 +20,16 @@ public class Goal : MonoBehaviour
 		if ( other.gameObject.tag == "Projectile" ) {
 
 			// If so, set goalMet to true
-		//	Goal.goalMet = true;
+		Goal.goalMet = true;
 	
 			// Also set the alpha of the color to higher opacity
-		//	Color c = renderer.material.color;
-		//	c.a = 1;
-		//	renderer.material.color = c;
+
+			Color c = GetComponent<Renderer> ().material.color;
+				//renderer.material.color;
+			c.a = 1;
+			GetComponent<Renderer>().material.color = c;
+		
+			//		Color c = GetComponent<Rigidbody>().material.color;
 		}
 	}
 }

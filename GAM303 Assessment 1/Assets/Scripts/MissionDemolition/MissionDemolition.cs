@@ -31,7 +31,13 @@ public class MissionDemolition : MonoBehaviour
 		levelMax = castles.Length;
 		StartLevel();
 	}
-	void StartLevel() {
+		
+
+	void StartLevel() 
+	{
+
+
+
 		// Get rid of the old castle if one exists
 		if (castle != null) {
 			Destroy( castle );
@@ -41,24 +47,33 @@ public class MissionDemolition : MonoBehaviour
 		foreach (GameObject pTemp in gos) {
 			Destroy( pTemp );
 		}
+
 		// Instantiate the new castle
 		castle = Instantiate( castles[level] ) as GameObject;
 		castle.transform.position = castlePos;
 		shotsTaken = 0;
+
 		// Reset the camera
 		SwitchView("Both");
 		ProjectileLine.S.Clear();
+
 		// Reset the goal
 		Goal.goalMet = false;
 		ShowGT();
 		mode = GameMode.playing;
 	}
+
 	void ShowGT() {
 		// Show the data in the GUITexts
 		gtLevel.text = "Level: "+(level+1)+" of "+levelMax;
 		gtScore.text = "Shots Taken: "+shotsTaken;
 	}
-	void Update() {
+
+	void Update() 
+	{
+
+//		Cursor.visible = true;
+
 		ShowGT();
 		// Check for level end
 		if (mode == GameMode.playing && Goal.goalMet) {
