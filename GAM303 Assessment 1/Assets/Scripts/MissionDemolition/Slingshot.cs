@@ -17,6 +17,8 @@ public class Slingshot : MonoBehaviour
 	public GameObject projectile;
 	public bool aimingMode;
 
+	public AudioSource audioSource;
+
 	void Awake() 
 	{
 		// Set the Slingshot singleton S
@@ -63,6 +65,7 @@ public class Slingshot : MonoBehaviour
 			FollowCam.S.poi = projectile;
 			projectile = null;
 			MissionDemolition.ShotFired();
+			audioSource.Play ();
 		}
 	}
 
@@ -80,10 +83,13 @@ public class Slingshot : MonoBehaviour
 	void OnMouseDown() {
 		// The player has pressed the mouse button while over Slingshot
 		aimingMode = true;
+
 		// Instantiate a Projectile
 		projectile = Instantiate( prefabProjectile ) as GameObject;
+
 		// Start it at the launchPoint
 		projectile.transform.position = launchPos;
+
 		// Set it to isKinematic for now
 		projectile.GetComponent<Rigidbody>().isKinematic = true;
 	}
