@@ -12,12 +12,17 @@ public enum GameMode {
 public class MissionDemolition : MonoBehaviour
 {
 	static public MissionDemolition S; // a Singleton
+
 	// fields set in the Unity Inspector pane
 	public GameObject[] castles; // An array of the castles
+//	public GameObject[] powers; // An array of the power ups
 	public Text gtLevel; // The GT_Level UIText
 	public Text gtScore; // The GT_Score UIText
 	public Vector3 castlePos; // The place to put castles
+	public AudioSource audioSource;
+	//	public Vector3 powersPos; // The place to put power ups
 	public bool _____________________________;
+
 	// fields set dynamically
 	public int level; // The current level
 	public int levelMax; // The number of levels
@@ -42,6 +47,13 @@ public class MissionDemolition : MonoBehaviour
 		if (castle != null) {
 			Destroy( castle );
 		}
+
+
+		// Get rid of the old power up if one exists
+//		if (powers != null) {
+//			Destroy( powers );
+//		}
+	
 		// Destroy old projectiles if they exist
 		GameObject[] gos = GameObject.FindGameObjectsWithTag("Projectile");
 		foreach (GameObject pTemp in gos) {
@@ -52,6 +64,11 @@ public class MissionDemolition : MonoBehaviour
 		castle = Instantiate( castles[level] ) as GameObject;
 		castle.transform.position = castlePos;
 		shotsTaken = 0;
+
+		// Instantiate the new power up
+		//powers = Instantiate( powers[level] ) as GameObject;
+		//powers.transform.position = powersPos;
+		//shotsTaken = 0;
 
 		// Reset the camera
 		SwitchView("Both");
@@ -85,12 +102,18 @@ public class MissionDemolition : MonoBehaviour
 			Invoke("NextLevel", 2f);
 		}
 	}
-	void NextLevel() {
+	void NextLevel() 
+	{
+		//plays sound to indicate the goal was hit.
+		audioSource.Play ();
+
 		level++;
-		if (level == levelMax) {
+		if (level == levelMax) 
+		{
 			level = 0;
 		}
 		StartLevel();
+	
 	}
 	void OnGUI() {
 		// Draw the GUI button for view switching at the top of the screen

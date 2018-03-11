@@ -8,6 +8,8 @@ public class Goal : MonoBehaviour
 	// A static field accessible by code anywhere
 	static public bool goalMet = false;
 
+
+
 	void Start()
 	{
 
@@ -21,7 +23,7 @@ public class Goal : MonoBehaviour
 
 			// If so, set goalMet to true
 		Goal.goalMet = true;
-	
+
 			// Also set the alpha of the color to higher opacity
 
 			Color c = GetComponent<Renderer> ().material.color;
