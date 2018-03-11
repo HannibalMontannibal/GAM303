@@ -30,8 +30,11 @@ public class MissionDemolition : MonoBehaviour
 	public GameObject castle; // The current castle
 	public GameMode mode = GameMode.idle;
 	public string showing = "Slingshot"; // FollowCam mode
-	void Start() {
+
+	void Start() 
+	{
 		S = this; // Define the Singleton
+	//starts up the first level
 		level = 0;
 		levelMax = castles.Length;
 		StartLevel();
@@ -107,6 +110,7 @@ public class MissionDemolition : MonoBehaviour
 		//plays sound to indicate the goal was hit.
 		audioSource.Play ();
 
+		//goes to the next level
 		level++;
 		if (level == levelMax) 
 		{
