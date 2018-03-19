@@ -19,7 +19,6 @@ public class LevelGenerator : MonoBehaviour
 	public Text enemyCount;
 	public Text healthText;
 
-	private int score = 0;
 	public int enemyAmount = 15;
 
 	//the [] shows that this variable is going to be an array
@@ -196,7 +195,6 @@ public class LevelGenerator : MonoBehaviour
 		GameObject playerInstance = Instantiate(player, createdTiles[Random.Range(0, createdTiles.Count)], Quaternion.identity);
 		PlayerController pc = playerInstance.GetComponent<PlayerController> ();
 		pc.levelGen = this;
-		pc.healthText = healthText;
 
 		// Instantiate & configure camera
 		GameObject cameraInstance = Instantiate(camera, createdTiles[Random.Range(0, createdTiles.Count)], Quaternion.identity);
