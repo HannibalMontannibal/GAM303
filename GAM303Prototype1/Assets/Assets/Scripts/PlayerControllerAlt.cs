@@ -6,7 +6,6 @@ public class PlayerControllerAlt : MonoBehaviour
 {
 	Rigidbody2D rb2d;
 	public float moveSpeed; //speed var
-	public float roll; //roll distance
 	public int dodgeCount;
 	public float dodgeSpeed;
 	private Vector2 dodgeVect;
@@ -36,7 +35,7 @@ public class PlayerControllerAlt : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Mouse1) && movement != Vector2.zero && dodgeCount == 0) //vector2.zero should be  (0,0) which movement will be if you're not moving.
 		{
-			dodgeCount = 60; //[frames for which to dodge here, man.]
+			dodgeCount = 60; //[frames for how long dodging lasts]
 			dodgeVect = movement.normalized;
 		}
 		//What all this does is set a timer for the dodge and record what direction you're dodging in, if you're moving, trying to dodge, and not standing perfectly still.
