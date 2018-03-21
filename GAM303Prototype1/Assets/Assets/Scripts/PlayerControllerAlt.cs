@@ -10,6 +10,8 @@ public class PlayerControllerAlt : MonoBehaviour
 	public float dodgeSpeed;
 	private Vector2 dodgeVect;
 
+	public LevelGenerator levelGen;
+
 	void Start ()
 	{
 		rb2d = GetComponent<Rigidbody2D> ();

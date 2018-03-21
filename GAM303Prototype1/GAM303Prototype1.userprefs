@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Assets\Scripts\PlayerControllerAlt.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Assets\Scripts\LevelGenerator.cs">
     <Files>
-      <File FileName="Assets\Assets\Scripts\PlayerControllerAlt.cs" Line="45" Column="18" />
+      <File FileName="Assets\Assets\Scripts\LevelGenerator.cs" Line="193" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

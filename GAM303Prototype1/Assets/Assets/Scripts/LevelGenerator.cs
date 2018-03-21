@@ -7,9 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelGenerator : MonoBehaviour 
 {
-	public GameObject gameOverText;
-	//public bool playerDead = false;
-	public bool gameOver = false;
 
 	public GameObject player;
 	public GameObject enemy;
@@ -17,7 +14,7 @@ public class LevelGenerator : MonoBehaviour
 	public GameObject portal;
 
 	public Text enemyCount;
-	public Text healthText;
+
 
 	public int enemyAmount = 15;
 
@@ -193,7 +190,7 @@ public class LevelGenerator : MonoBehaviour
 	void SpawnObjects()
 	{
 		GameObject playerInstance = Instantiate(player, createdTiles[Random.Range(0, createdTiles.Count)], Quaternion.identity);
-		PlayerController pc = playerInstance.GetComponent<PlayerController> ();
+		PlayerControllerAlt pc = playerInstance.GetComponent<PlayerControllerAlt> ();
 		pc.levelGen = this;
 
 		// Instantiate & configure camera
