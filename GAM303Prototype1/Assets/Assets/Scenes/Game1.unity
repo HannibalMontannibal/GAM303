@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1059192549109842, guid: b6e8cf3edff8e664ea7e045ea081b22f, type: 2}
-  enemy: {fileID: 0}
+  enemy: {fileID: 1674016125021326, guid: f0eb654acd6bf0c4e982cf4f91c3eff2, type: 2}
   camera: {fileID: 1230301416085826, guid: 096f35116941cb144992002481d1cf82, type: 2}
   portal: {fileID: 0}
   enemyCount: {fileID: 0}

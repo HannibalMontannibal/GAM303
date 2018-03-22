@@ -12,9 +12,12 @@ public class PlayerControllerAlt : MonoBehaviour
 
 	public LevelGenerator levelGen;
 
+	private Animator animator;
+
 	void Start ()
 	{
 		rb2d = GetComponent<Rigidbody2D> ();
+		animator = GetComponent<Animator> ();
 
 	}
 
@@ -37,8 +40,10 @@ public class PlayerControllerAlt : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Mouse1) && movement != Vector2.zero && dodgeCount == 0) //vector2.zero should be  (0,0) which movement will be if you're not moving.
 		{
-			dodgeCount = 60; //[frames for how long dodging lasts]
+			dodgeCount = 40; //[frames for how long dodging lasts]
 			dodgeVect = movement.normalized;
+			animator.SetTrigger("Roll");
+
 		}
 		//What all this does is set a timer for the dodge and record what direction you're dodging in, if you're moving, trying to dodge, and not standing perfectly still.
 
