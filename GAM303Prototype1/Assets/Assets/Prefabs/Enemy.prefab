@@ -79,7 +79,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 32, y: 32}
+    oldSize: {x: 16, y: 16}
     newSize: {x: 32, y: 32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -87,18 +87,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 4.714958, y: 10.18541}
-      - {x: -2, y: 10.118202}
-      - {x: -7.2445145, y: 6.7902713}
-      - {x: -8.996952, y: 5.754743}
-      - {x: -12.050995, y: 2.6558576}
-      - {x: -14.924686, y: -1.0753121}
-      - {x: -15.126308, y: -11.454237}
-      - {x: -14.336033, y: -12.983789}
-      - {x: 14.857481, y: -13.118203}
-      - {x: 14.911903, y: -4.0400987}
-      - {x: 14.168652, y: 0.013867378}
-      - {x: 11.026682, y: 5.1935163}
+    - - {x: 7.126396, y: -3.8715138}
+      - {x: 6.1165485, y: -1.821362}
+      - {x: 3.9304466, y: 0.20292664}
+      - {x: 1.9427452, y: 1.0494971}
+      - {x: -2.052349, y: 1.1854672}
+      - {x: -4.915413, y: -0.80228996}
+      - {x: -5.951557, y: -2.026322}
+      - {x: -7.068573, y: -3.9258432}
+      - {x: -7.160534, y: -6.925785}
+      - {x: 6.9761925, y: -7.119014}
+      - {x: 7.3835087, y: -6.510352}
+      - {x: 7.4048615, y: -5.8676906}
+      - {x: 7.2624874, y: -4.8051324}
 --- !u!114 &114999619661364398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,11 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  chaseRange: 80
-  stopRange: 10
+  chaseRange: 90
+  stopRange: 25
   currentHealth: 0
   maxHealth: 10
-  moveSpeed: 40
+  moveSpeed: 35
   timeBetweenMove: 3
   timeToMove: 1
   levelGenerator: {fileID: 0}
