@@ -19,6 +19,8 @@ public class Snake : MonoBehaviour
 	// Tail Prefab
 	public GameObject tailPrefab;
 
+	public MathGenerator generatorBoy;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -78,12 +80,15 @@ public class Snake : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		// Is it Food?
-		if (coll.name.StartsWith ("FoodPrefab")) {
+		if (coll.CompareTag("Correct")) {
 			// Get longer in next Move call
 			snakeAte = true;
 
+		
+			generatorBoy.Generate();
 			// Destroy the Food from the scene
-			Destroy (coll.gameObject);
+			//coll.gameObject.transform.position = new Vector3 (1000,1000,0);
+		
 		}
 
 		// If the snake collided with either it's own Tail or Border

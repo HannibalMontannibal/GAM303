@@ -24,14 +24,44 @@ public class MathGenerator : MonoBehaviour {
 
 	public int dummyCount;
 	public List<int> answers;
+	public List <GameObject> foodPrefabList;
 
 	Difficulty difficulty;
+
+	//the Food prefab
+	public GameObject foodPrefab;
+
+	//the Borders
+	public Transform borderTop;
+	public Transform borderBottom;
+	public Transform borderLeft;
+	public Transform borderRight;
+
 
 	void Start()
 	{
 		difficulty = Difficulty.EASY;
-		correctOrNot.text = "";
+		Generate ();
+//		correctOrNot.text = "";
 	}
+
+
+	//spawn one piece of food
+	void Spawn(GameObject spawnedObject)
+	{
+		// x position between left & right border
+		int x = (int)Random.Range(borderLeft.position.x,
+			borderRight.position.x);
+
+		// y position between top & bottom border
+		int y = (int)Random.Range(borderBottom.position.y, borderTop.position.y);
+
+		spawnedObject.transform.position = new Vector3 (x, y, 0);
+		Debug.Log(x + "" +y);
+		// Instantiate the food at (x, y) point
+		//Instantiate(foodPrefab, new Vector2(x, y), Quaternion.identity); //the default rotation
+	}
+
 
 	int AdditionProblem(int numberOne, int numberTwo)
 	{
@@ -41,6 +71,7 @@ public class MathGenerator : MonoBehaviour {
 
 		return firstNumber + secondNumber;
 	}
+
 
 	int DummyAddition(int correctAnswer)
 	{
@@ -62,10 +93,10 @@ public class MathGenerator : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Alpha3))
 			difficulty = Difficulty.HARD;
 
-		difficultyHolder.text = difficulty.ToString();
+//		difficultyHolder.text = difficulty.ToString();
 	}
 
-	void Generate()
+	public void Generate()
 	{
 		correctAnswer = AdditionProblem (GetRandom(), GetRandom());
 		equation [0].text = firstNumber.ToString ();
@@ -79,7 +110,7 @@ public class MathGenerator : MonoBehaviour {
 		for (int i = 0; i < dummyCount; i++)
 			answers.Add (DummyAddition (correctAnswer));
 
-		answers.Add (correctAnswer);	//Add the correct answer to the list
+		//answers.Add (correctAnswer);	//Add the correct answer to the list
 
 		PutNumbersOnButtons ();
 	}
@@ -95,10 +126,24 @@ public class MathGenerator : MonoBehaviour {
 			answers [randomIndex] = temp;
 		}
 
-		answerButtons [0].text = answers[0].ToString();
-		answerButtons [1].text = answers[1].ToString();
-		answerButtons [2].text = answers[2].ToString();
-		answerButtons [3].text = answers[3].ToString();
+		foodPrefabList[0].GetComponentInChildren<TextMesh>().text = answers[0].ToString();
+
+		foodPrefabList[1].GetComponentInChildren<TextMesh>().text = answers[1].ToString();
+
+		foodPrefabList[2].GetComponentInChildren<TextMesh>().text = answers[2].ToString();
+
+		foodPrefabList[3].GetComponentInChildren<TextMesh>().text = answers[3].ToString();
+
+		foodPrefabList[4].GetComponentInChildren<TextMesh>().text = correctAnswer.ToString();
+
+		for (int i = 0; i < foodPrefabList.Count; i++) 
+		{
+			Spawn (foodPrefabList [i]);
+		}
+	//	answerButtons [0].text = answers[0].ToString();
+	//	answerButtons [1].text = answers[1].ToString();
+	//	answerButtons [2].text = answers[2].ToString();
+	//	answerButtons [3].text = answers[3].ToString();
 	}
 
 	int GetRandom()
