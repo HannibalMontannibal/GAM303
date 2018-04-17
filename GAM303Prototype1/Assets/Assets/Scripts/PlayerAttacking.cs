@@ -8,7 +8,7 @@ public class PlayerAttacking : MonoBehaviour
 	private bool attacking = false;
 
 	private float coolDownTimer = 0;
-	private float coolDownLength = 1.0f;
+	public float coolDownLength = 1.0f;
 
 	private float animationTimer = 0;
 	public float animationLength = 0.3f;
