@@ -15,4 +15,4 @@ public class link : MonoBehaviour {
 	}
 }
 
-https://www.youtube.com/watch?v=bcTq6BVwrDA
+//https://www.youtube.com/watch?v=bcTq6BVwrDA
