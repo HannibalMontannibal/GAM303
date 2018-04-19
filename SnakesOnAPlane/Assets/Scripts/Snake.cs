@@ -5,6 +5,7 @@ using System.Linq;
 
 public class Snake : MonoBehaviour
 {
+	public MathGenerator mathGen;
 
 	// The current Movement Direction
 	// (as a default it moves to the right)
@@ -92,8 +93,10 @@ public class Snake : MonoBehaviour
 		}
 
 		// If the snake collided with either it's own Tail or Border
-		else {
-			// 'Game Over' screen
+		else
+		{
+			Destroy (gameObject);
+			mathGen.PlayerDied ();
 		}
 
 	}

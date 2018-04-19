@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MathGenerator : MonoBehaviour {
 
@@ -37,6 +38,8 @@ public class MathGenerator : MonoBehaviour {
 	public Transform borderLeft;
 	public Transform borderRight;
 
+	public bool gameOver = false;
+	public GameObject gameOverText;
 
 	void Start()
 	{
@@ -94,13 +97,23 @@ public class MathGenerator : MonoBehaviour {
 			difficulty = Difficulty.HARD;
 
 //		difficultyHolder.text = difficulty.ToString();
+
+		if (gameOver == true && Input.GetKeyDown (KeyCode.Space)) 
+		{
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		}
+
+	//	Cursor.visible = false;
 	}
 
 	public void Generate()
 	{
 		correctAnswer = AdditionProblem (GetRandom(), GetRandom());
+
 		equation [0].text = firstNumber.ToString ();
+
 		equation [2].text = secondNumber.ToString ();
+
 		equation [4].text = "???";
 
 		dummyAnswer = DummyAddition (correctAnswer);	//For a single
@@ -165,6 +178,18 @@ public class MathGenerator : MonoBehaviour {
 			equation [4].text = correctAnswer.ToString ();
 		}
 			
+	}
+
+	public void PlayerDied ()
+	{
+		gameOver = true;
+
+		gameOverText.SetActive (true);
+
+		if (gameOver = true)
+		{
+			Cursor.visible = true;
+		}
 	}
 
 }
