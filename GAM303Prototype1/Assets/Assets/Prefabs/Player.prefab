@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b77b48c4a2b9ae48b253eec410e27fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coolDownLength: 1
   animationLength: 0.3
   attackTrigger: {fileID: 60467332270162210}
 --- !u!114 &114823492814414524
@@ -233,10 +234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e06231e9fa1cf14cbead98f09f7a6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 500
+  maxHealth: 500
   moveSpeed: 50
   dodgeCount: 1
   dodgeSpeed: 100
   levelGen: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!212 &212122106880501926
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -8,13 +8,20 @@ using UnityEngine.SceneManagement;
 public class LevelGenerator : MonoBehaviour 
 {
 
+	public GameObject gameOverText;
+	//public bool playerDead = false;
+	public bool gameOver = false;
+
+
 	public GameObject player;
 	public GameObject enemy;
 	public GameObject camera;
 	public GameObject portal;
 
+	public Text scoreText;
+	public Text highScore;
 	public Text enemyCount;
-
+	public Text healthText;
 
 	public int enemyAmount = 15;
 
@@ -68,7 +75,11 @@ public class LevelGenerator : MonoBehaviour
 
 	void Update()
 	{
-
+		//reloads the game when spacebar is hit, provided that the player is dead
+		if (gameOver == true && Input.GetKeyDown (KeyCode.Space)) 
+		{
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		}
 
 		//makes the cursor invisible
 		Cursor.visible = false;
@@ -263,6 +274,24 @@ public class LevelGenerator : MonoBehaviour
 		if (enemyAmount == 0) {
 			print ("Spawn portal at: " + position);
 			Instantiate (portal, position, Quaternion.identity);
+		}
+
+	}
+
+
+	public void PlayerDied()
+	{
+		//if (playerDead == true)
+		gameOver = true; 
+
+
+		gameOverText.SetActive (true);
+
+		//makes the cursor visible if it's Game Over
+		if (gameOver = true) 
+		{
+			Cursor.visible = true;
+
 		}
 
 	}

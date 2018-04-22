@@ -54,8 +54,11 @@
      <Compile Include="Assets\Assets\Scripts\AttackingTrigger.cs" />
      <Compile Include="Assets\Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Assets\Scripts\EnemyAI.cs" />
+     <Compile Include="Assets\Assets\Scripts\EnemyAttacking.cs" />
+     <Compile Include="Assets\Assets\Scripts\EnemyAttackingTrigger.cs" />
      <Compile Include="Assets\Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Assets\Scripts\LevelGenerator.cs" />
+     <Compile Include="Assets\Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerAttacking.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerControllerAlt.cs" />

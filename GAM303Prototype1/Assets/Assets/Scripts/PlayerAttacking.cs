@@ -44,6 +44,8 @@ public class PlayerAttacking : MonoBehaviour
 				animationTimer = 0;
 			}
 
+
+
 		attacking = animationTimer < animationLength;
 		attackTrigger.enabled = attacking;
 		anim.SetBool ("Attacking", attacking);
