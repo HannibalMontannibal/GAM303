@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 135059189883619764}
   - component: {fileID: 23276587602140882}
   - component: {fileID: 54574740486252482}
+  - component: {fileID: 114050797432341288}
   m_Layer: 0
   m_Name: BallPrefab
   m_TagString: Ball
@@ -99,6 +100,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &114050797432341288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844749375443942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f693e8b9b77e4b4bb5bdad421390392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseHeight: -5
 --- !u!135 &135059189883619764
 SphereCollider:
   m_ObjectHideFlags: 1
