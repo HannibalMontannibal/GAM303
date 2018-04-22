@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1059192549109842}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: -1}
-  m_LocalPosition: {x: -77.7, y: 47.8, z: 0}
+  m_LocalPosition: {x: 256.42108, y: -28.7474, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4021362878675624}
@@ -234,13 +234,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e06231e9fa1cf14cbead98f09f7a6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 500
+  currentHealth: 0
   maxHealth: 500
   moveSpeed: 50
   dodgeCount: 1
   dodgeSpeed: 100
   levelGen: {fileID: 0}
-  healthText: {fileID: 0}
+  healthText: {fileID: 114877845046150354, guid: d0b8fe8f234e44943a89191d19fceafd,
+    type: 2}
 --- !u!212 &212122106880501926
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -272,8 +273,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -942853523
-  m_SortingLayer: 2
+  m_SortingLayerID: -561771619
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6f7f07a558f2e9547be88b1350d5c1b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

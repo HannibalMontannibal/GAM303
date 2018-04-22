@@ -127,10 +127,10 @@ public class EnemyAI : MonoBehaviour
 		}
 			
 		if (myrigid.velocity.x > 0.001f) {
-			transform.localScale = new Vector3 (1, 1, 1);
+			transform.localScale = new Vector3 ( 1,  1,  1);
 		}
 		else if (myrigid.velocity.x < -0.001f) {
-			transform.localScale = new Vector3 (-1, 1, 1);
+			transform.localScale = new Vector3 (- 1,  1,  1);
 		}
 
 		print ("Setting speed");

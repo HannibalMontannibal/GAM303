@@ -18,8 +18,6 @@ public class LevelGenerator : MonoBehaviour
 	public GameObject camera;
 	public GameObject portal;
 
-	public Text scoreText;
-	public Text highScore;
 	public Text enemyCount;
 	public Text healthText;
 
@@ -81,13 +79,9 @@ public class LevelGenerator : MonoBehaviour
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 		}
 
-		//makes the cursor invisible
-		Cursor.visible = false;
-
 
 	}
 		
-
 	IEnumerator GenerateLevel()
 	{
 		//for each tile created, we are moving the generator in one of the directions of the (0, 4) range- 0 being up, 1 being right, 2 being left and 3 being down
