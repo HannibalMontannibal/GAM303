@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 500
+  maxHealth: 50
   moveSpeed: 50
   dodgeCount: 1
   dodgeSpeed: 100
