@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 20729275750675130}
   - component: {fileID: 124019010790443370}
   - component: {fileID: 81648809759054952}
-  - component: {fileID: 114340610829524256}
+  - component: {fileID: 114169019842698502}
+  - component: {fileID: 114689379607892218}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -63,7 +64,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 90
+  orthographic size: 60
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -86,7 +87,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230301416085826}
   m_Enabled: 1
---- !u!114 &114340610829524256
+--- !u!114 &114169019842698502
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -99,7 +100,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTarget: {fileID: 0}
   levelLoaded: 0
-  moveSpeed: 50
+  moveSpeed: 2
+--- !u!114 &114689379607892218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230301416085826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f0dda58e9580543822bf2880be9099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  pauseMenu: {fileID: 0}
 --- !u!124 &124019010790443370
 Behaviour:
   m_ObjectHideFlags: 1
